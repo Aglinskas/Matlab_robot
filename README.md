@@ -1,6 +1,6 @@
-## Matlab Robot
+# Matlab Robot
 
-# Scripting Mouse movement, mouse & keyboard pressed with MATLAB. 
+## Scripting Mouse movement, mouse & keyboard pressed with MATLAB. 
 Robot loops through a list of names and downloads they're .csv google trend data.
 
 ### Click to Play Demo
