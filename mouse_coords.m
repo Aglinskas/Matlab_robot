@@ -1,18 +1,10 @@
-function mouse_coords
-old_coords = [nan nan];
-new_coords = [nan nan];
-buttons = [];
-while sum(buttons) == 0
-old_coords = new_coords;
-%[x,y,buttons,focus,valuators,valinfo] = GetMouse(ptb.window);
-[x,y,buttons,focus,valuators,valinfo] = GetMouse();
-new_coords = [x;y];
-
-if all(old_coords == new_coords) ~= 1
-    clc
-    disp(num2str(new_coords))
-    
+coords = get(0, 'PointerLocation');
+clc
+while 1
+new_coords= get(0, 'PointerLocation');
+if ~(sum(coords == new_coords) == 2)
+clc
+disp(sprintf('Mouse at: X=%d, Y=%d',new_coords(1),new_coords(2)))
 end
-end
-
+coords = new_coords;
 end
